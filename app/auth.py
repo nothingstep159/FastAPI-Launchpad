@@ -2,8 +2,9 @@
 from datetime import datetime, timedelta, timezone
 from passlib.context import CryptContext
 import jwt
+from .settings import settings
+SECRET_KEY = settings.SECRET_KEY  # remove hardcoded key
 
-SECRET_KEY = "CHANGE_ME_IN_ENV"
 ALGORITHM = "HS256"
 ACCESS_MINUTES = 30
 
